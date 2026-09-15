@@ -1,0 +1,6 @@
+{
+  "name": "BizTax Hub - 1인 법인 vs 개인사업자 세금·건보료 시뮬레이터",
+  "description": "연 매출 5천만~3억원대 사업자를 위한 1인 법인 vs 개인사업자 실질 세금, 건강보험료, 국민연금 정밀 비교 시뮬레이터 및 절세 전문 칼럼 포털.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
