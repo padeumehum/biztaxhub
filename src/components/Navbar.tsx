@@ -67,7 +67,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab, onSelec
               <BookOpen className="w-4 h-4" />
               절세 심층 칼럼
               <span className="ml-1 text-[11px] bg-amber-400/20 text-amber-300 px-1.5 py-0.2 rounded-full font-semibold border border-amber-400/30">
-                4편
+                13편
               </span>
             </button>
 
@@ -144,7 +144,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab, onSelec
               <span>절세 심층 전문 칼럼</span>
             </div>
             <span className="text-xs bg-amber-400/20 text-amber-300 px-2 py-0.5 rounded-full font-semibold">
-              4편
+              13편
             </span>
           </button>
           <button
