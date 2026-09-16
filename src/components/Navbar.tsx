@@ -1,5 +1,6 @@
 import React from 'react';
 import { Calculator, BookOpen, ShieldAlert, Info, TrendingUp, Menu, X } from 'lucide-react';
+import { TAX_COLUMNS } from '../data/columns';
 
 interface NavbarProps {
   activeTab: 'simulator' | 'columns' | 'about' | 'legal';
@@ -67,7 +68,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab, onSelec
               <BookOpen className="w-4 h-4" />
               절세 심층 칼럼
               <span className="ml-1 text-[11px] bg-amber-400/20 text-amber-300 px-1.5 py-0.2 rounded-full font-semibold border border-amber-400/30">
-                13편
+                {TAX_COLUMNS.length}편
               </span>
             </button>
 
@@ -144,7 +145,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab, onSelec
               <span>절세 심층 전문 칼럼</span>
             </div>
             <span className="text-xs bg-amber-400/20 text-amber-300 px-2 py-0.5 rounded-full font-semibold">
-              13편
+              {TAX_COLUMNS.length}편
             </span>
           </button>
           <button
@@ -164,8 +165,8 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab, onSelec
               activeTab === 'legal' ? 'bg-blue-600 text-white' : 'text-slate-300 hover:bg-slate-800'
             }`}
           >
-            <ShieldAlert className="w-5 h-5 text-indigo-400" />
-            법적 고지 & 문의하기
+            <ShieldAlert className="w-5 h-5 text-rose-400" />
+            법적 고지 & 문의
           </button>
         </div>
       )}
