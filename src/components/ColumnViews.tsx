@@ -220,7 +220,7 @@ export const ColumnViews: React.FC<ColumnViewsProps> = ({
 
           {/* Category Filter Pills */}
           <div className="flex flex-wrap gap-1.5">
-            {['전체', '법인전환', '건강보험', '청년창업감면', '자금인출'].map((cat) => (
+            {['전체', '법인전환', '건강보험', '세액감면', '급여전략', '비용처리', '자금관리', '배당전략', '퇴직금플랜', '가족법인'].map((cat) => (
               <button
                 key={cat}
                 type="button"

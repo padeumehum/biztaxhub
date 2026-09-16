@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { SimulationInput } from './types';
 import { runTaxSimulation } from './utils/taxCalculator';
 import { Navbar } from './components/Navbar';
@@ -25,6 +25,25 @@ export default function App() {
   const [activeTab, setActiveTab] = useState<'simulator' | 'columns' | 'about' | 'legal'>('simulator');
   const [selectedColumnId, setSelectedColumnId] = useState<string | null>(null);
   const [input, setInput] = useState<SimulationInput>(DEFAULT_INPUT);
+
+  // Parse URL query params on initial load for deep-linking SEO support
+  useEffect(() => {
+    try {
+      const params = new URLSearchParams(window.location.search);
+      const tabParam = params.get('tab');
+      const idParam = params.get('id');
+
+      if (tabParam === 'columns' || tabParam === 'about' || tabParam === 'legal' || tabParam === 'simulator') {
+        setActiveTab(tabParam);
+      }
+      if (idParam) {
+        setSelectedColumnId(idParam);
+        setActiveTab('columns');
+      }
+    } catch {
+      // Graceful fallback for non-browser environments
+    }
+  }, []);
 
   // Compute live tax simulation
   const simulationResult = useMemo(() => {

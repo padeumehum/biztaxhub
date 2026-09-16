@@ -88,7 +88,18 @@ export interface TaxColumn {
   id: string;
   slug: string;
   title: string;
-  category: '법인전환' | '건강보험' | '청년창업감면' | '자금인출';
+  category:
+    | '법인전환'
+    | '건강보험'
+    | '청년창업감면'
+    | '자금인출'
+    | '세액감면'
+    | '급여전략'
+    | '비용처리'
+    | '자금관리'
+    | '배당전략'
+    | '퇴직금플랜'
+    | '가족법인';
   summary: string;
   readTime: string;
   publishedDate: string;
